@@ -10,7 +10,7 @@ pipeline {
   stages {
     stage("foo") {
       steps {
-        echo "test: ${params.userTest}"
+        echo "test: ${params.region}"
       }
     }
   }
