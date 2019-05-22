@@ -9,6 +9,9 @@ pipeline {
   stages {
     stage("foo") {
       steps {
+        script {
+          sh "./example.sh ${userFlag}"
+        }
         echo "test: ${params.userFlag}"
       }
     }
