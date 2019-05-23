@@ -1,18 +1,13 @@
 pipeline {
   agent any
 
-  parameters {
-    booleanParam(defaultValue: true, description: 'User flag?', name: 'userFlag')
-  } 
-
-
   stages {
     stage("foo") {
       steps {
         script {
-          sh "./example.sh ${userFlag}"
+          sh "./example.sh true"
         }
-        echo "test: ${params.userFlag}"
+        echo "test: true"
       }
     }
   }
